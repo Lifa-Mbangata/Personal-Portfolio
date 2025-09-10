@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react'
 import './App.css'
 
@@ -7,7 +6,7 @@ function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     // Smooth scrolling to sections
-    const scrollToSection = (sectionId) => {
+    const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId)
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' })
@@ -393,7 +392,7 @@ function App() {
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="message">Message</label>
-                                    <textarea id="message" name="message" rows="5" required></textarea>
+                                    <textarea id="message" name="message" rows={5} required></textarea>
                                 </div>
                                 <button type="submit" className="btn btn-primary">Send Message</button>
                             </form>
@@ -413,4 +412,3 @@ function App() {
 }
 
 export default App
-
